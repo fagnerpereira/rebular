@@ -1,47 +1,43 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "hanami", "~> 2.2.0.beta"
-gem "hanami-assets", "~> 2.2.0.beta"
-gem "hanami-controller", "~> 2.2.0.beta"
-gem "hanami-db", "~> 2.2.0.beta"
-gem "hanami-router", "~> 2.2.0.beta"
-gem "hanami-validations", "~> 2.2.0.beta"
-gem "hanami-view", "~> 2.2.0.beta"
+gem 'hanami', '~> 2.2.0.beta'
+gem 'hanami-assets', '~> 2.2.0.beta'
+gem 'hanami-controller', '~> 2.2.0.beta'
+gem 'hanami-db', '~> 2.2.0.beta'
+gem 'hanami-router', '~> 2.2.0.beta'
+gem 'hanami-validations', '~> 2.2.0.beta'
+gem 'hanami-view', '~> 2.2.0.beta'
 
-gem "dry-types", "~> 1.0", ">= 1.6.1"
-gem "dry-operation", github: "dry-rb/dry-operation"
-gem "puma"
-gem "rake"
-gem "sqlite3"
+gem 'dry-operation', github: 'dry-rb/dry-operation'
+gem 'dry-types', '~> 1.0', '>= 1.6.1'
+gem 'puma'
+gem 'rake'
+gem 'sqlite3'
 
 group :development do
-  gem "hanami-webconsole", "~> 2.2.0.beta"
-  gem "guard-puma"
-  gem "slim_lint"
+  gem 'guard-puma'
+  gem 'hanami-webconsole', '~> 2.2.0.beta'
+  gem 'slim_lint'
 end
 
 group :development, :test do
-  gem "dotenv"
+  gem 'dotenv'
 end
 
 group :cli, :development do
-  gem "hanami-reloader", "~> 2.2.0.beta"
+  gem 'hanami-reloader', '~> 2.2.0.beta'
 end
 
 group :cli, :development, :test do
-  gem "hanami-rspec", "~> 2.2.0.beta"
+  gem 'hanami-rspec', '~> 2.2.0.beta'
 end
 
 group :test do
-  gem "capybara"
-  gem "rack-test"
+  gem 'capybara'
+  gem 'rack-test'
 end
 
-gem "slim", "~> 5.2"
-
-group :test do
-  gem "capybara"
-  gem "rack-test"
-end
+# Additional gems for this project
+gem 'slim', '~> 5.2'
