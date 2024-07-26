@@ -20,6 +20,8 @@ group :development do
   gem 'guard-puma'
   gem 'hanami-webconsole', '~> 2.2.0.beta'
   gem 'slim_lint'
+  gem 'solargraph'
+  gem 'pry'
 end
 
 group :development, :test do
