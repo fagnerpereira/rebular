@@ -5,8 +5,10 @@ html lang="en"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     title Rebular
     = favicon_tag
-    = stylesheet_tag 'app'
+    = vite_client_tag
 
-  body class="bg-slate-800"
+    = vite_stylesheets 'styles'
+    = vite_javascripts 'application'
+
+  body class=""
     = yield
-    = javascript_tag 'app'

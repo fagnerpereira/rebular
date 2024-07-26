@@ -41,3 +41,5 @@ end
 
 # Additional gems for this project
 gem 'slim', '~> 5.2'
+
+gem 'vite_hanami', '~> 3.0'
