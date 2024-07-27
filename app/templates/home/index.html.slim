@@ -4,3 +4,20 @@
       | Rebular
     p.text-green-500.text-lg
       | a Ruby regular expression editor
+
+  = form_for '', class: 'bg-gray-500 text-white p-4' do |f|
+    .flex.flex-col.gap-4
+      .flex.items-end.gap-2
+        .flex.flex-col
+          = f.label 'Your regular expression:', class: 'text-white'
+          = f.text_field :regex
+        .flex.items-end
+          = f.text_field :options, class: ''
+
+      .flex.flex-col
+        = f.label 'Your test string:'
+        = f.text_area :test_string
+
+      .flex.flex-col
+        = f.label 'Match result:'
+        = f.text_field :match_result
