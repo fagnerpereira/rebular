@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'hanami/rake_tasks'
-require 'vite_hanami'
 
 namespace :tailwind do
   desc 'Compile your Tailwind CSS'
@@ -27,5 +26,3 @@ namespace :tailwind do
     )
   end
 end
-
-ViteRuby.install_tasks

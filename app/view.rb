@@ -3,7 +3,6 @@
 
 require 'hanami/view'
 require 'slim'
-require 'vite_hanami'
 
 module Rebular
   class View < Hanami::View
