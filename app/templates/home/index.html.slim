@@ -1,23 +1,50 @@
 .flex.flex-col.items-center.justify-center
   .flex.flex-col.items-center.justify-center
-    h1.text-green-500.text-4xl.font-bold
+    h1.text-lime-500.text-4xl.font-bold
       | Rebular
-    p.text-green-500.text-lg
+    p.text-lime-500.text-lg
       | a Ruby regular expression editor
 
-  = form_for '', class: 'bg-gray-500 text-white p-4' do |f|
-    .flex.flex-col.gap-4
-      .flex.items-end.gap-2
+  .flex.flex-col.border-8.border-white.w-full.bg-neutral-700.p-4.gap-2
+    = form_for '', class: 'text-white' do |f|
+      .flex.flex-col.gap-4
+
+        .flex.items-end.gap-2
+          / field for the regular expression
+          .flex.flex-col.w-full
+            = f.label 'Your regular expression:', class: 'text-white'
+            = f.text_field :regex, class: 'bg-black border border-white'
+
+          / field for the options
+          .flex.items-end
+            = f.text_field :options, class: 'bg-black border border-white'
+
+        / field for the test string
         .flex.flex-col
-          = f.label 'Your regular expression:', class: 'text-white'
-          = f.text_field :regex
-        .flex.items-end
-          = f.text_field :options, class: ''
+          = f.label 'Your test string:'
+          = f.text_area :test_string, class: 'bg-black border border-white'
 
-      .flex.flex-col
-        = f.label 'Your test string:'
-        = f.text_area :test_string
+        / field for the match result
+        .flex.flex-col
+          = f.label 'Match result:'
+          = f.text_field :match_result, class: 'bg-black border border-white'
 
-      .flex.flex-col
-        = f.label 'Match result:'
-        = f.text_field :match_result
+        .flex.gap-2
+          .flex.text-xs
+            = f.label 'Wrap words'
+            = f.check_box :wrap_words
+
+          .flex.text-xs
+            = f.label 'Show invisibles'
+            = f.check_box :show_invisibles
+
+    .flex.flex-col.bg-yellow-100.border-8.border-yellow-300.p-4.items-center
+      p.text-yellow-900
+        | Rubular is a Ruby-based regular expression editor. It's a handy way to test regular expressions as you write them.
+
+      p.text-yellow-900
+        | To start, enter a regular expression and a test string. Or you can try an example.
+
+    .flex.gap-2.justify-center
+      button.bg-neutral-500.text-white.text-xs.px-2 make permalink
+      button.bg-neutral-500.text-white.text-xs.px-2 clear fields
