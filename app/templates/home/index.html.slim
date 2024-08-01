@@ -27,7 +27,7 @@
         / field for the match result
         .flex.flex-col
           = f.label 'Match result:'
-          = f.text_field :match_result, class: 'bg-black border border-white'
+          = f.text_field :match_result, value: match_result, class: 'bg-black border border-white'
 
         .flex.gap-2
           .flex.text-xs

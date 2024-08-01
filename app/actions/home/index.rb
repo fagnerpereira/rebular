@@ -5,6 +5,7 @@ module Rebular
     module Home
       class Index < Rebular::Action
         def handle(request, response)
+          response.render(view, match_result: '')
         end
       end
     end
